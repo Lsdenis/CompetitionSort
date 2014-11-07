@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMP.Presentation", "CMP.Presentation\CMP.Presentation.csproj", "{E55EC95F-5DC7-44D5-B3A0-D14169AAF7DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMP.BusinessLogic", "CMP.BusinessLogin\CMP.BusinessLogic.csproj", "{E0D8A644-9D13-46EE-8A76-09A1F43C21C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E55EC95F-5DC7-44D5-B3A0-D14169AAF7DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E55EC95F-5DC7-44D5-B3A0-D14169AAF7DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E55EC95F-5DC7-44D5-B3A0-D14169AAF7DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E55EC95F-5DC7-44D5-B3A0-D14169AAF7DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0D8A644-9D13-46EE-8A76-09A1F43C21C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0D8A644-9D13-46EE-8A76-09A1F43C21C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0D8A644-9D13-46EE-8A76-09A1F43C21C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0D8A644-9D13-46EE-8A76-09A1F43C21C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
