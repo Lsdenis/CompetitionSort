@@ -197,15 +197,19 @@
 			// categoryDataGridView
 			// 
 			this.categoryDataGridView.AllowUserToAddRows = false;
+			this.categoryDataGridView.AllowUserToResizeColumns = false;
+			this.categoryDataGridView.AllowUserToResizeRows = false;
 			this.categoryDataGridView.AutoGenerateColumns = false;
 			this.categoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.categoryDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
+			this.categoryDataGridView.Cursor = System.Windows.Forms.Cursors.Default;
 			this.categoryDataGridView.DataSource = this.categoryBindingSource;
 			this.categoryDataGridView.Location = new System.Drawing.Point(12, 28);
 			this.categoryDataGridView.Name = "categoryDataGridView";
+			this.categoryDataGridView.RowHeadersVisible = false;
 			this.categoryDataGridView.Size = new System.Drawing.Size(379, 220);
 			this.categoryDataGridView.TabIndex = 2;
 			// 
