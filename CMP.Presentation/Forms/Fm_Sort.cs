@@ -260,14 +260,15 @@ namespace CMP.Presentation.Forms
 			}
 		}
 
-		private void SettingsDBToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-
-		}
-
 		private void categoriesSettingsMenuStrip_Click(object sender, EventArgs e)
 		{
 			var form = new Fm_CategoriesEdit();
+			form.ShowDialog(this);
+		}
+
+		private void editSportsmenToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			var form = new Fm_EditSportsmen();
 			form.ShowDialog(this);
 		}
 	}

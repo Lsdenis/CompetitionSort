@@ -65,6 +65,7 @@
       <DependentUpon>CMPModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="DataModel\Partials\Category.cs" />
+    <Compile Include="DataModel\Partials\Sportsmen.cs" />
     <Compile Include="DataModel\Sportsmen.cs">
       <DependentUpon>CMPModel.tt</DependentUpon>
     </Compile>

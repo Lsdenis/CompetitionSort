@@ -75,11 +75,35 @@
     </Compile>
     <Compile Include="DTO\PrintDTO.cs" />
     <Compile Include="Extenstions\Extensions.cs" />
+    <Compile Include="Forms\Fm_Sportsman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Fm_Sportsman.Designer.cs">
+      <DependentUpon>Fm_Sportsman.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Fm_CategoriesEdit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Fm_CategoriesEdit.Designer.cs">
       <DependentUpon>Fm_CategoriesEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Fm_EditSportsmanInCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Fm_EditSportsmanInCategories.Designer.cs">
+      <DependentUpon>Fm_EditSportsmanInCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Fm_EditSportsmen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Fm_EditSportsmen.Designer.cs">
+      <DependentUpon>Fm_EditSportsmen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Fm_ImportFromExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Fm_ImportFromExcel.Designer.cs">
+      <DependentUpon>Fm_ImportFromExcel.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Fm_Sort.cs">
       <SubType>Form</SubType>
@@ -95,6 +119,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\TextBoxWithPlaceholder.resx">
       <DependentUpon>TextBoxWithPlaceholder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Fm_EditSportsmen.resx">
+      <DependentUpon>Fm_EditSportsmen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Fm_Sportsman.resx">
+      <DependentUpon>Fm_Sportsman.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Fm_CategoriesEdit.resx">
       <DependentUpon>Fm_CategoriesEdit.cs</DependentUpon>

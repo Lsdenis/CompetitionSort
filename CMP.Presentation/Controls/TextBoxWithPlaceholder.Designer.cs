@@ -43,17 +43,20 @@
 			this.txtInputText.Size = new System.Drawing.Size(206, 20);
 			this.txtInputText.TabIndex = 0;
 			this.txtInputText.TextChanged += new System.EventHandler(this.txtInputText_TextChanged);
+			this.txtInputText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInputText_KeyPress);
 			// 
 			// lblPlaceholder
 			// 
 			this.lblPlaceholder.AutoSize = true;
 			this.lblPlaceholder.BackColor = System.Drawing.Color.White;
+			this.lblPlaceholder.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.lblPlaceholder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.lblPlaceholder.ForeColor = System.Drawing.Color.Silver;
 			this.lblPlaceholder.Location = new System.Drawing.Point(3, 3);
 			this.lblPlaceholder.Name = "lblPlaceholder";
 			this.lblPlaceholder.Size = new System.Drawing.Size(0, 13);
 			this.lblPlaceholder.TabIndex = 1;
+			this.lblPlaceholder.Click += new System.EventHandler(this.lblPlaceholder_Click);
 			// 
 			// TextBoxWithPlaceholder
 			// 
