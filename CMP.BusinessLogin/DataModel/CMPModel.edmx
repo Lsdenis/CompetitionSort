@@ -25,6 +25,7 @@
           </Key>
           <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="SportsmenInCategories">
           <Key>
@@ -103,6 +104,7 @@
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="String" Name="Name" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="SportsmenInCategories" Relationship="CMPModel.FK_SportsmenInCategories_Categories" FromRole="Category" ToRole="SportsmenInCategory" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="SportsmenInCategory">
           <Key>
@@ -168,6 +170,7 @@
           <EntitySetMapping Name="Categories">
             <EntityTypeMapping TypeName="CMPModel.Category">
               <MappingFragment StoreEntitySet="Categories">
+                <ScalarProperty Name="Code" ColumnName="Code" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>

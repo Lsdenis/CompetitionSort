@@ -1,6 +1,6 @@
 ﻿namespace CMP.Presentation.Forms
 {
-	partial class Fm_CategoriesEdit
+	partial class Fm_EditCategories
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -29,9 +29,8 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fm_CategoriesEdit));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fm_EditCategories));
 			this.btnClose = new System.Windows.Forms.Button();
-			this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.categoryBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
 			this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
 			this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -49,25 +48,23 @@
 			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
+			this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.categoryBindingNavigator)).BeginInit();
 			this.categoryBindingNavigator.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.categoryDataGridView)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// btnClose
 			// 
-			this.btnClose.Location = new System.Drawing.Point(316, 254);
+			this.btnClose.Location = new System.Drawing.Point(237, 254);
 			this.btnClose.Name = "btnClose";
 			this.btnClose.Size = new System.Drawing.Size(75, 23);
 			this.btnClose.TabIndex = 1;
 			this.btnClose.Text = "Закрыть";
 			this.btnClose.UseVisualStyleBackColor = true;
 			this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-			// 
-			// categoryBindingSource
-			// 
-			this.categoryBindingSource.DataSource = typeof(CMP.BusinessLogin.DataModel.Category);
 			// 
 			// categoryBindingNavigator
 			// 
@@ -95,7 +92,7 @@
 			this.categoryBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
 			this.categoryBindingNavigator.Name = "categoryBindingNavigator";
 			this.categoryBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-			this.categoryBindingNavigator.Size = new System.Drawing.Size(406, 25);
+			this.categoryBindingNavigator.Size = new System.Drawing.Size(320, 25);
 			this.categoryBindingNavigator.TabIndex = 2;
 			this.categoryBindingNavigator.Text = "bindingNavigator1";
 			// 
@@ -187,7 +184,6 @@
 			// categoryBindingNavigatorSaveItem
 			// 
 			this.categoryBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.categoryBindingNavigatorSaveItem.Enabled = false;
 			this.categoryBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("categoryBindingNavigatorSaveItem.Image")));
 			this.categoryBindingNavigatorSaveItem.Name = "categoryBindingNavigatorSaveItem";
 			this.categoryBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
@@ -196,7 +192,7 @@
 			// 
 			// categoryDataGridView
 			// 
-			this.categoryDataGridView.AllowUserToAddRows = false;
+			this.categoryDataGridView.AllowUserToDeleteRows = false;
 			this.categoryDataGridView.AllowUserToResizeColumns = false;
 			this.categoryDataGridView.AllowUserToResizeRows = false;
 			this.categoryDataGridView.AutoGenerateColumns = false;
@@ -204,13 +200,13 @@
 			this.categoryDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-			this.categoryDataGridView.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
 			this.categoryDataGridView.DataSource = this.categoryBindingSource;
 			this.categoryDataGridView.Location = new System.Drawing.Point(12, 28);
 			this.categoryDataGridView.Name = "categoryDataGridView";
 			this.categoryDataGridView.RowHeadersVisible = false;
-			this.categoryDataGridView.Size = new System.Drawing.Size(379, 220);
+			this.categoryDataGridView.Size = new System.Drawing.Size(300, 220);
 			this.categoryDataGridView.TabIndex = 2;
 			// 
 			// dataGridViewTextBoxColumn1
@@ -224,33 +220,46 @@
 			// 
 			this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
 			this.dataGridViewTextBoxColumn2.DataPropertyName = "Name";
-			this.dataGridViewTextBoxColumn2.HeaderText = "Name";
+			this.dataGridViewTextBoxColumn2.HeaderText = "Название";
 			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+			this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
 			// 
 			// dataGridViewTextBoxColumn3
 			// 
-			this.dataGridViewTextBoxColumn3.DataPropertyName = "SportsmenInCategories";
-			this.dataGridViewTextBoxColumn3.HeaderText = "SportsmenInCategories";
+			this.dataGridViewTextBoxColumn3.DataPropertyName = "Code";
+			this.dataGridViewTextBoxColumn3.HeaderText = "Код";
 			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-			this.dataGridViewTextBoxColumn3.Visible = false;
+			this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
 			// 
-			// Fm_CategoriesEdit
+			// dataGridViewTextBoxColumn4
+			// 
+			this.dataGridViewTextBoxColumn4.DataPropertyName = "SportsmenInCategories";
+			this.dataGridViewTextBoxColumn4.HeaderText = "SportsmenInCategories";
+			this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+			this.dataGridViewTextBoxColumn4.Visible = false;
+			// 
+			// categoryBindingSource
+			// 
+			this.categoryBindingSource.DataSource = typeof(CMP.BusinessLogin.DataModel.Category);
+			// 
+			// Fm_EditDategories
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(406, 282);
+			this.ClientSize = new System.Drawing.Size(320, 282);
 			this.Controls.Add(this.categoryDataGridView);
 			this.Controls.Add(this.categoryBindingNavigator);
 			this.Controls.Add(this.btnClose);
-			this.Name = "Fm_CategoriesEdit";
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.Name = "Fm_EditDategories";
 			this.Text = "Настройка категорий";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Fm_CategoriesEdit_FormClosing);
 			this.Load += new System.EventHandler(this.Fm_CategoriesEdit_Load);
-			((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.categoryBindingNavigator)).EndInit();
 			this.categoryBindingNavigator.ResumeLayout(false);
 			this.categoryBindingNavigator.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.categoryDataGridView)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -277,5 +286,6 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
 	}
 }

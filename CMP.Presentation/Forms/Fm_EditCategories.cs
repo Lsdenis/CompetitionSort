@@ -5,11 +5,11 @@ using CMP.BusinessLogin.DataModel;
 
 namespace CMP.Presentation.Forms
 {
-	public partial class Fm_CategoriesEdit : Form
+	public partial class Fm_EditCategories : Form
 	{
 		private CMPEntities _context;
 
-		public Fm_CategoriesEdit()
+		public Fm_EditCategories()
 		{
 			StartPosition = FormStartPosition.CenterParent;
 			_context = new CMPEntities();
@@ -33,22 +33,22 @@ namespace CMP.Presentation.Forms
 			Close();
 		}
 
-		private void categoryBindingNavigatorSaveItem_Click(object sender, System.EventArgs e)
-		{
-			SaveChanges();
-		}
-
 		private void SaveChanges()
 		{
-			foreach (var product in _context.Categories.Local.ToList())
+			foreach (var category in _context.Categories.Local.ToList())
 			{
-				if (string.IsNullOrWhiteSpace(product.Name))
+				if (string.IsNullOrWhiteSpace(category.Name) || string.IsNullOrWhiteSpace(category.Code))
 				{
-					_context.Categories.Remove(product);
+					_context.Categories.Remove(category);
 				}
 			}
 
 			_context.SaveChanges();
+		}
+
+		private void categoryBindingNavigatorSaveItem_Click(object sender, System.EventArgs e)
+		{
+			SaveChanges();
 		}
 	}
 }

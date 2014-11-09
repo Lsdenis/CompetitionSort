@@ -125,7 +125,7 @@
 			this.lblAge.TabIndex = 8;
 			this.lblAge.Text = "Возраст";
 			// 
-			// Fm_AddSportsman
+			// Fm_Sportsman
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -140,8 +140,9 @@
 			this.Controls.Add(this.txtLastName);
 			this.Controls.Add(this.btnClose);
 			this.Controls.Add(this.btnSave);
-			this.Name = "Fm_AddSportsman";
-			this.Text = "Fm_AddSportsman";
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+			this.Name = "Fm_Sportsman";
+			this.Text = "Спортсмен";
 			this.Load += new System.EventHandler(this.Fm_AddSportsman_Load);
 			((System.ComponentModel.ISupportInitialize)(this.udAge)).EndInit();
 			this.ResumeLayout(false);

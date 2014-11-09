@@ -32,9 +32,9 @@
 			this.clmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.clmAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.clmClub = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.txtSearch = new CMP.Presentation.Controls.TextBoxWithPlaceholder();
 			this.btnClose = new System.Windows.Forms.Button();
 			this.btnAdd = new System.Windows.Forms.Button();
+			this.txtSearch = new CMP.Presentation.Controls.TextBoxWithPlaceholder();
 			((System.ComponentModel.ISupportInitialize)(this.dgvSportsmen)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -79,15 +79,6 @@
 			this.clmClub.Name = "clmClub";
 			this.clmClub.ReadOnly = true;
 			// 
-			// txtSearch
-			// 
-			this.txtSearch.Location = new System.Drawing.Point(12, 41);
-			this.txtSearch.Name = "txtSearch";
-			this.txtSearch.OnEnterPressed = null;
-			this.txtSearch.Placeholder = "Введите фамилию...";
-			this.txtSearch.Size = new System.Drawing.Size(372, 20);
-			this.txtSearch.TabIndex = 1;
-			// 
 			// btnClose
 			// 
 			this.btnClose.Location = new System.Drawing.Point(308, 417);
@@ -108,6 +99,15 @@
 			this.btnAdd.UseVisualStyleBackColor = true;
 			this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
 			// 
+			// txtSearch
+			// 
+			this.txtSearch.Location = new System.Drawing.Point(12, 41);
+			this.txtSearch.Name = "txtSearch";
+			this.txtSearch.OnEnterPressed = null;
+			this.txtSearch.Placeholder = "Введите фамилию...";
+			this.txtSearch.Size = new System.Drawing.Size(372, 20);
+			this.txtSearch.TabIndex = 1;
+			// 
 			// Fm_EditSportsmen
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -117,8 +117,9 @@
 			this.Controls.Add(this.btnClose);
 			this.Controls.Add(this.txtSearch);
 			this.Controls.Add(this.dgvSportsmen);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Name = "Fm_EditSportsmen";
-			this.Text = "Fm_EditSportsmen";
+			this.Text = "Редактирование спортсменов";
 			this.Load += new System.EventHandler(this.Fm_EditSportsmen_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvSportsmen)).EndInit();
 			this.ResumeLayout(false);

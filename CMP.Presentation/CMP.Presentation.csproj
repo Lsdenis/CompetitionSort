@@ -36,6 +36,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\packages\EPPlus.3.1.3.3\lib\net35\EPPlus.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
@@ -73,6 +76,7 @@
     <Compile Include="Controls\TextBoxWithPlaceholder.Designer.cs">
       <DependentUpon>TextBoxWithPlaceholder.cs</DependentUpon>
     </Compile>
+    <Compile Include="DTO\ImportSportsmenDTO.cs" />
     <Compile Include="DTO\PrintDTO.cs" />
     <Compile Include="Extenstions\Extensions.cs" />
     <Compile Include="Forms\Fm_Sportsman.cs">
@@ -81,11 +85,11 @@
     <Compile Include="Forms\Fm_Sportsman.Designer.cs">
       <DependentUpon>Fm_Sportsman.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Fm_CategoriesEdit.cs">
+    <Compile Include="Forms\Fm_EditCategories.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Fm_CategoriesEdit.Designer.cs">
-      <DependentUpon>Fm_CategoriesEdit.cs</DependentUpon>
+    <Compile Include="Forms\Fm_EditCategories.Designer.cs">
+      <DependentUpon>Fm_EditCategories.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Fm_EditSportsmanInCategories.cs">
       <SubType>Form</SubType>
@@ -112,6 +116,7 @@
       <DependentUpon>Fm_Sort.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\DocumentsHelper.cs" />
+    <Compile Include="Helpers\ExcelParseHelper.cs" />
     <Compile Include="Helpers\PrintHelper.cs" />
     <Compile Include="Helpers\SortHelper.cs" />
     <Compile Include="Paths\PathInfo.cs" />
@@ -120,14 +125,20 @@
     <EmbeddedResource Include="Controls\TextBoxWithPlaceholder.resx">
       <DependentUpon>TextBoxWithPlaceholder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Fm_EditSportsmanInCategories.resx">
+      <DependentUpon>Fm_EditSportsmanInCategories.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Fm_EditSportsmen.resx">
       <DependentUpon>Fm_EditSportsmen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Fm_ImportFromExcel.resx">
+      <DependentUpon>Fm_ImportFromExcel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Fm_Sportsman.resx">
       <DependentUpon>Fm_Sportsman.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Fm_CategoriesEdit.resx">
-      <DependentUpon>Fm_CategoriesEdit.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Fm_EditCategories.resx">
+      <DependentUpon>Fm_EditCategories.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Fm_Sort.resx">
       <DependentUpon>Fm_Sort.cs</DependentUpon>

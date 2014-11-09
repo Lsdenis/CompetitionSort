@@ -262,13 +262,19 @@ namespace CMP.Presentation.Forms
 
 		private void categoriesSettingsMenuStrip_Click(object sender, EventArgs e)
 		{
-			var form = new Fm_CategoriesEdit();
+			var form = new Fm_EditCategories();
 			form.ShowDialog(this);
 		}
 
 		private void editSportsmenToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			var form = new Fm_EditSportsmen();
+			form.ShowDialog(this);
+		}
+
+		private void importSportsmenToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			var form = new Fm_ImportFromExcel();
 			form.ShowDialog(this);
 		}
 	}

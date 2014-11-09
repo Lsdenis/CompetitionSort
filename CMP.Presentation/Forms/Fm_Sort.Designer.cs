@@ -45,17 +45,17 @@
 			this.IsClubSortIncludedMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.categoriesSettingsMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
+			this.sportsmenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.editSportsmenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.editInCategoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.importSportsmenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.QuitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.btnOpen = new System.Windows.Forms.Button();
 			this.bottonStatusStrip = new System.Windows.Forms.StatusStrip();
 			this.txtNumberOfSportsmen = new System.Windows.Forms.ToolStripStatusLabel();
 			this.pbCreatePartition = new System.Windows.Forms.ToolStripProgressBar();
 			this.txtCompetitionName = new CMP.Presentation.Controls.TextBoxWithPlaceholder();
-			this.sportsmenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.importSportsmenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.editSportsmenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.editInCategoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			((System.ComponentModel.ISupportInitialize)(this.pcLogo)).BeginInit();
 			this.mainMenuStrip.SuspendLayout();
 			this.bottonStatusStrip.SuspendLayout();
@@ -208,6 +208,44 @@
 			this.categoriesSettingsMenuStrip.Text = "Настройка категорий";
 			this.categoriesSettingsMenuStrip.Click += new System.EventHandler(this.categoriesSettingsMenuStrip_Click);
 			// 
+			// sportsmenToolStripMenuItem
+			// 
+			this.sportsmenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem,
+            this.importSportsmenToolStripMenuItem});
+			this.sportsmenToolStripMenuItem.Name = "sportsmenToolStripMenuItem";
+			this.sportsmenToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+			this.sportsmenToolStripMenuItem.Text = "Спортсмены";
+			// 
+			// editToolStripMenuItem
+			// 
+			this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editSportsmenToolStripMenuItem,
+            this.editInCategoriesToolStripMenuItem});
+			this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+			this.editToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+			this.editToolStripMenuItem.Text = "Редактирование";
+			// 
+			// editSportsmenToolStripMenuItem
+			// 
+			this.editSportsmenToolStripMenuItem.Name = "editSportsmenToolStripMenuItem";
+			this.editSportsmenToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+			this.editSportsmenToolStripMenuItem.Text = "Редактирование спортсменов";
+			this.editSportsmenToolStripMenuItem.Click += new System.EventHandler(this.editSportsmenToolStripMenuItem_Click);
+			// 
+			// editInCategoriesToolStripMenuItem
+			// 
+			this.editInCategoriesToolStripMenuItem.Name = "editInCategoriesToolStripMenuItem";
+			this.editInCategoriesToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+			this.editInCategoriesToolStripMenuItem.Text = "Редактирование в категориях";
+			// 
+			// importSportsmenToolStripMenuItem
+			// 
+			this.importSportsmenToolStripMenuItem.Name = "importSportsmenToolStripMenuItem";
+			this.importSportsmenToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+			this.importSportsmenToolStripMenuItem.Text = "Импорт";
+			this.importSportsmenToolStripMenuItem.Click += new System.EventHandler(this.importSportsmenToolStripMenuItem_Click);
+			// 
 			// QuitToolStripMenuItem
 			// 
 			this.QuitToolStripMenuItem.Name = "QuitToolStripMenuItem";
@@ -255,46 +293,10 @@
 			// 
 			this.txtCompetitionName.Location = new System.Drawing.Point(12, 27);
 			this.txtCompetitionName.Name = "txtCompetitionName";
+			this.txtCompetitionName.OnEnterPressed = null;
 			this.txtCompetitionName.Placeholder = "Название соревнования...";
 			this.txtCompetitionName.Size = new System.Drawing.Size(495, 20);
 			this.txtCompetitionName.TabIndex = 8;
-			// 
-			// sportsmenToolStripMenuItem
-			// 
-			this.sportsmenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editToolStripMenuItem,
-            this.importSportsmenToolStripMenuItem});
-			this.sportsmenToolStripMenuItem.Name = "sportsmenToolStripMenuItem";
-			this.sportsmenToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
-			this.sportsmenToolStripMenuItem.Text = "Спортсмены";
-			// 
-			// editToolStripMenuItem
-			// 
-			this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editSportsmenToolStripMenuItem,
-            this.editInCategoriesToolStripMenuItem});
-			this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-			this.editToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-			this.editToolStripMenuItem.Text = "Редактирование";
-			// 
-			// importSportsmenToolStripMenuItem
-			// 
-			this.importSportsmenToolStripMenuItem.Name = "importSportsmenToolStripMenuItem";
-			this.importSportsmenToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-			this.importSportsmenToolStripMenuItem.Text = "Импорт";
-			// 
-			// editSportsmenToolStripMenuItem
-			// 
-			this.editSportsmenToolStripMenuItem.Name = "editSportsmenToolStripMenuItem";
-			this.editSportsmenToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
-			this.editSportsmenToolStripMenuItem.Text = "Редактирование спортсменов";
-			this.editSportsmenToolStripMenuItem.Click += new System.EventHandler(this.editSportsmenToolStripMenuItem_Click);
-			// 
-			// editInCategoriesToolStripMenuItem
-			// 
-			this.editInCategoriesToolStripMenuItem.Name = "editInCategoriesToolStripMenuItem";
-			this.editInCategoriesToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
-			this.editInCategoriesToolStripMenuItem.Text = "Редактирование в категориях";
 			// 
 			// Fm_Sort
 			// 
