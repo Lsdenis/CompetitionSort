@@ -57,5 +57,14 @@ namespace CMP.BusinessLogin.Services
 				return context.Sportsmens.ToList();
 			}
 		}
+
+		public static void SaveSportsmanInCategory(SportsmenInCategory sportsmanInCategory)
+		{
+			using (var context = new CMPEntities())
+			{
+				context.SportsmenInCategories.Add(sportsmanInCategory);
+				context.SaveChanges();
+			}
+		}
 	}
 }

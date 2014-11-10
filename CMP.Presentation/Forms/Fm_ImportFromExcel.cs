@@ -31,7 +31,7 @@ namespace CMP.Presentation.Forms
 
 			dgvImportSportsmen.Rows.Clear();
 
-			_sportsmen = ExcelParseHelper.GetImmImportSportsmenDtos(openFileDialog.FileName);
+			_sportsmen = ExcelParseHelper.GetImportSportsmenDtos(openFileDialog.FileName);
 
 			foreach (var importSportsmenDto in _sportsmen)
 			{
@@ -67,7 +67,7 @@ namespace CMP.Presentation.Forms
 
 			foreach (var sportsman in _sportsmen)
 			{
-				//SportsmenService.ImportSportsman(sportsman);
+				ExcelParseHelper.SaveSportsman(sportsman);
 			}
 
 			MessageBox.Show("Импорт завершен!", "Внимание!", MessageBoxButtons.OK);

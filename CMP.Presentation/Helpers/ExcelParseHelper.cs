@@ -4,12 +4,14 @@ using System.IO;
 using CMP.BusinessLogin.Services;
 using CMP.Presentation.DTO;
 using OfficeOpenXml;
+using CMP.BusinessLogin.DataModel;
+using System.Linq;
 
 namespace CMP.Presentation.Helpers
 {
 	static class ExcelParseHelper
 	{
-		public static List<ImportSportsmenDTO> GetImmImportSportsmenDtos(string path)
+		public static List<ImportSportsmenDTO> GetImportSportsmenDtos(string path)
 		{
 			var existingFile = new FileInfo(path);
 			using (var package = new ExcelPackage(existingFile))
@@ -80,5 +82,35 @@ namespace CMP.Presentation.Helpers
 
 			return dto;
 		}
+
+        public static void SaveSportsman(ImportSportsmenDTO importSportsmanDTO)
+		{
+			var sportsman = new Sportsmen();
+
+			sportsman.Name = importSportsmanDTO.Name;
+			sportsman.LastName = importSportsmanDTO.LastName;
+			sportsman.Club = importSportsmanDTO.Club;
+			sportsman.Age = importSportsmanDTO.Age;
+
+			SportsmenService.SaveOrUpdateSportsman(sportsman);
+
+			var categories = CategoryService.GetCategories();
+
+			foreach (var categoryCode in importSportsmanDTO.Categories)
+			{
+				var sportsmanInCategory = new SportsmenInCategory();
+				var category = categories.FirstOrDefault(ct => ct.Code.Equals(categoryCode));
+
+				if (category == null)
+				{
+					return;
+				}
+
+				sportsmanInCategory.SportsmenId = sportsman.Id;
+				sportsmanInCategory.CategoryId = category.Id;
+
+				SportsmenService.SaveSportsmanInCategory(sportsmanInCategory);
+			}
+		} 
 	}
 }
