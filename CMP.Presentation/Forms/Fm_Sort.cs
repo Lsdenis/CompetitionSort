@@ -66,11 +66,7 @@ namespace CMP.Presentation.Forms
 
 		private void WorkComplete(object sender, RunWorkerCompletedEventArgs e)
 		{
-			Invoke(new Action(() =>
-			{
-				pbCreatePartition.MarqueeAnimationSpeed = 0;
-				pbCreatePartition.Value = 0;
-			}));
+			
 		}
 
 		private void CircleWork(object sender, DoWorkEventArgs e)
@@ -208,7 +204,6 @@ namespace CMP.Presentation.Forms
 
 		private void btnCircleSystem_Click(object sender, EventArgs e)
 		{
-			pbCreatePartition.MarqueeAnimationSpeed = 300;
 			var printDto = GetCurrentCategoryDto();
 			_circleWorker.RunWorkerAsync(printDto);
 		}
@@ -260,19 +255,19 @@ namespace CMP.Presentation.Forms
 			}
 		}
 
-		private void categoriesSettingsMenuStrip_Click(object sender, EventArgs e)
+		private void categoriesEditToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			var form = new Fm_EditCategories();
 			form.ShowDialog(this);
 		}
 
-		private void editSportsmenToolStripMenuItem_Click(object sender, EventArgs e)
+		private void sportsmenEditToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			var form = new Fm_EditSportsmen();
 			form.ShowDialog(this);
 		}
 
-		private void importSportsmenToolStripMenuItem_Click(object sender, EventArgs e)
+		private void importToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			var form = new Fm_ImportFromExcel();
 			form.ShowDialog(this);

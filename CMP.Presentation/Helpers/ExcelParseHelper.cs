@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Windows.Forms;
 using CMP.BusinessLogin.Services;
 using CMP.Presentation.DTO;
 using OfficeOpenXml;
@@ -83,7 +84,7 @@ namespace CMP.Presentation.Helpers
 			return dto;
 		}
 
-        public static void SaveSportsman(ImportSportsmenDTO importSportsmanDTO)
+		public static void SaveSportsman(ImportSportsmenDTO importSportsmanDTO)
 		{
 			var sportsman = new Sportsmen();
 
@@ -92,6 +93,22 @@ namespace CMP.Presentation.Helpers
 			sportsman.Club = importSportsmanDTO.Club;
 			sportsman.Age = importSportsmanDTO.Age;
 
+			var sportsmen = SportsmenService.LoadAllSportsmen();
+
+			if (
+				sportsmen.Any(
+					sp =>
+						sp.Name.Equals(sportsman.Name, StringComparison.InvariantCultureIgnoreCase) &&
+						sp.LastName.Equals(sportsman.LastName, StringComparison.InvariantCultureIgnoreCase) &&
+						sp.Club.Equals(sportsman.Club, StringComparison.InvariantCultureIgnoreCase)))
+			{
+				var result = MessageBox.Show("Спортсмен с таким именем и фамилией сущестсвует. Вы хотите добавить его?", "Внимание!", MessageBoxButtons.YesNo);
+
+				if (result == DialogResult.No)
+				{
+					return;
+				}
+			}
 			SportsmenService.SaveOrUpdateSportsman(sportsman);
 
 			var categories = CategoryService.GetCategories();
@@ -103,7 +120,7 @@ namespace CMP.Presentation.Helpers
 
 				if (category == null)
 				{
-					return;
+					continue;
 				}
 
 				sportsmanInCategory.SportsmenId = sportsman.Id;
@@ -111,6 +128,6 @@ namespace CMP.Presentation.Helpers
 
 				SportsmenService.SaveSportsmanInCategory(sportsmanInCategory);
 			}
-		} 
+		}
 	}
 }

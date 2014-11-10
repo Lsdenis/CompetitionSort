@@ -44,7 +44,7 @@ namespace CMP.Presentation.Forms
 			var categories = "";
 			for (var index = 0; index < importSportsmenDto.Categories.Count; index++)
 			{
-				if (index != importSportsmenDto.Categories.Count)
+				if (index != importSportsmenDto.Categories.Count - 1)
 				{
 					categories += importSportsmenDto.Categories[index] + ", ";
 				}

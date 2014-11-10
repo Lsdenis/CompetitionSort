@@ -43,18 +43,14 @@
 			this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
 			this.SettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.IsClubSortIncludedMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-			this.categoriesSettingsMenuStrip = new System.Windows.Forms.ToolStripMenuItem();
-			this.sportsmenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.editSportsmenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.editInCategoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.importSportsmenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.dbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.categoriesEditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.QuitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.btnOpen = new System.Windows.Forms.Button();
 			this.bottonStatusStrip = new System.Windows.Forms.StatusStrip();
 			this.txtNumberOfSportsmen = new System.Windows.Forms.ToolStripStatusLabel();
-			this.pbCreatePartition = new System.Windows.Forms.ToolStripProgressBar();
+			this.sportsmenEditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.txtCompetitionName = new CMP.Presentation.Controls.TextBoxWithPlaceholder();
 			((System.ComponentModel.ISupportInitialize)(this.pcLogo)).BeginInit();
 			this.mainMenuStrip.SuspendLayout();
@@ -170,7 +166,7 @@
 			// 
 			this.mainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SettingsToolStripMenuItem,
-            this.sportsmenToolStripMenuItem,
+            this.dbToolStripMenuItem,
             this.QuitToolStripMenuItem});
 			this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
 			this.mainMenuStrip.Name = "mainMenuStrip";
@@ -181,9 +177,7 @@
 			// SettingsToolStripMenuItem
 			// 
 			this.SettingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.IsClubSortIncludedMenuStrip,
-            this.toolStripSeparator1,
-            this.categoriesSettingsMenuStrip});
+            this.IsClubSortIncludedMenuStrip});
 			this.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem";
 			this.SettingsToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
 			this.SettingsToolStripMenuItem.Text = "Настройки";
@@ -192,59 +186,26 @@
 			// 
 			this.IsClubSortIncludedMenuStrip.CheckOnClick = true;
 			this.IsClubSortIncludedMenuStrip.Name = "IsClubSortIncludedMenuStrip";
-			this.IsClubSortIncludedMenuStrip.Size = new System.Drawing.Size(192, 22);
+			this.IsClubSortIncludedMenuStrip.Size = new System.Drawing.Size(161, 22);
 			this.IsClubSortIncludedMenuStrip.Text = "Учитывать клуб";
 			this.IsClubSortIncludedMenuStrip.Click += new System.EventHandler(this.IsClubSortIncludedMenuStrip_Click);
 			// 
-			// toolStripSeparator1
+			// dbToolStripMenuItem
 			// 
-			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(189, 6);
+			this.dbToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.categoriesEditToolStripMenuItem,
+            this.sportsmenEditToolStripMenuItem,
+            this.importToolStripMenuItem});
+			this.dbToolStripMenuItem.Name = "dbToolStripMenuItem";
+			this.dbToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+			this.dbToolStripMenuItem.Text = "База данных";
 			// 
-			// categoriesSettingsMenuStrip
+			// categoriesEditToolStripMenuItem
 			// 
-			this.categoriesSettingsMenuStrip.Name = "categoriesSettingsMenuStrip";
-			this.categoriesSettingsMenuStrip.Size = new System.Drawing.Size(192, 22);
-			this.categoriesSettingsMenuStrip.Text = "Настройка категорий";
-			this.categoriesSettingsMenuStrip.Click += new System.EventHandler(this.categoriesSettingsMenuStrip_Click);
-			// 
-			// sportsmenToolStripMenuItem
-			// 
-			this.sportsmenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editToolStripMenuItem,
-            this.importSportsmenToolStripMenuItem});
-			this.sportsmenToolStripMenuItem.Name = "sportsmenToolStripMenuItem";
-			this.sportsmenToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
-			this.sportsmenToolStripMenuItem.Text = "Спортсмены";
-			// 
-			// editToolStripMenuItem
-			// 
-			this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editSportsmenToolStripMenuItem,
-            this.editInCategoriesToolStripMenuItem});
-			this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-			this.editToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-			this.editToolStripMenuItem.Text = "Редактирование";
-			// 
-			// editSportsmenToolStripMenuItem
-			// 
-			this.editSportsmenToolStripMenuItem.Name = "editSportsmenToolStripMenuItem";
-			this.editSportsmenToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
-			this.editSportsmenToolStripMenuItem.Text = "Редактирование спортсменов";
-			this.editSportsmenToolStripMenuItem.Click += new System.EventHandler(this.editSportsmenToolStripMenuItem_Click);
-			// 
-			// editInCategoriesToolStripMenuItem
-			// 
-			this.editInCategoriesToolStripMenuItem.Name = "editInCategoriesToolStripMenuItem";
-			this.editInCategoriesToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
-			this.editInCategoriesToolStripMenuItem.Text = "Редактирование в категориях";
-			// 
-			// importSportsmenToolStripMenuItem
-			// 
-			this.importSportsmenToolStripMenuItem.Name = "importSportsmenToolStripMenuItem";
-			this.importSportsmenToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
-			this.importSportsmenToolStripMenuItem.Text = "Импорт";
-			this.importSportsmenToolStripMenuItem.Click += new System.EventHandler(this.importSportsmenToolStripMenuItem_Click);
+			this.categoriesEditToolStripMenuItem.Name = "categoriesEditToolStripMenuItem";
+			this.categoriesEditToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+			this.categoriesEditToolStripMenuItem.Text = "Редактирование категорий";
+			this.categoriesEditToolStripMenuItem.Click += new System.EventHandler(this.categoriesEditToolStripMenuItem_Click);
 			// 
 			// QuitToolStripMenuItem
 			// 
@@ -266,8 +227,7 @@
 			// bottonStatusStrip
 			// 
 			this.bottonStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.txtNumberOfSportsmen,
-            this.pbCreatePartition});
+            this.txtNumberOfSportsmen});
 			this.bottonStatusStrip.Location = new System.Drawing.Point(0, 374);
 			this.bottonStatusStrip.Name = "bottonStatusStrip";
 			this.bottonStatusStrip.Size = new System.Drawing.Size(622, 22);
@@ -281,13 +241,19 @@
 			this.txtNumberOfSportsmen.Size = new System.Drawing.Size(505, 17);
 			this.txtNumberOfSportsmen.Spring = true;
 			// 
-			// pbCreatePartition
+			// sportsmenEditToolStripMenuItem
 			// 
-			this.pbCreatePartition.AutoSize = false;
-			this.pbCreatePartition.MarqueeAnimationSpeed = 0;
-			this.pbCreatePartition.Name = "pbCreatePartition";
-			this.pbCreatePartition.Size = new System.Drawing.Size(100, 16);
-			this.pbCreatePartition.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+			this.sportsmenEditToolStripMenuItem.Name = "sportsmenEditToolStripMenuItem";
+			this.sportsmenEditToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+			this.sportsmenEditToolStripMenuItem.Text = "Редактирование спортсменов";
+			this.sportsmenEditToolStripMenuItem.Click += new System.EventHandler(this.sportsmenEditToolStripMenuItem_Click);
+			// 
+			// importToolStripMenuItem
+			// 
+			this.importToolStripMenuItem.Name = "importToolStripMenuItem";
+			this.importToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+			this.importToolStripMenuItem.Text = "Импорт";
+			this.importToolStripMenuItem.Click += new System.EventHandler(this.importToolStripMenuItem_Click);
 			// 
 			// txtCompetitionName
 			// 
@@ -351,14 +317,10 @@
 		private System.Windows.Forms.ToolStripMenuItem IsClubSortIncludedMenuStrip;
 		private System.Windows.Forms.Button btnOpen;
 		private System.Windows.Forms.StatusStrip bottonStatusStrip;
-		private System.Windows.Forms.ToolStripProgressBar pbCreatePartition;
 		private System.Windows.Forms.ToolStripStatusLabel txtNumberOfSportsmen;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-		private System.Windows.Forms.ToolStripMenuItem categoriesSettingsMenuStrip;
-		private System.Windows.Forms.ToolStripMenuItem sportsmenToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem importSportsmenToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem editSportsmenToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem editInCategoriesToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem dbToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem categoriesEditToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem sportsmenEditToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
 	}
 }
